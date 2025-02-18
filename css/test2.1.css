@@ -1,0 +1,96 @@
+html{margin:0; padding: 0; background-color: #415d54;}
+body{max-width: 1000px; margin: 0 auto;}
+div[id *= background ]{
+    background: white;
+    border-radius: 10px;
+}
+a{
+    cursor: pointer;
+}
+ul,li{
+    list-style: none;
+}
+.Phead{
+    width: 100%;
+    height: 50px;
+}
+div[id *= menu]{
+    position: fixed;
+}
+#menu1-background{max-width: 1000px;}
+#menu2-background{
+    display: none;
+    align-content: center;
+    z-index: 10;
+}
+.M2{background: none; }
+#M2-icon{
+    width: min-content;
+    padding: 10px 20px 10px 20px;
+    font-size: 22px;
+    font-weight: bold;
+}
+.menu {
+    display: none;
+    padding-top: 10px;
+    padding-left: 22px;
+}
+.menu ul {
+    
+    padding: 0;
+    margin: 0;
+}
+.menu li {
+    padding-bottom: 18px;
+}
+.menu li a{
+    text-decoration: none;
+    color: white;
+}
+/* 마우스를 가져다대면 메뉴가 나타나도록 설정 */
+#menu2-background:hover{
+    background: tomato;
+    padding-bottom: 200px;
+}
+#menu2-background:hover .menu{
+    display: block;
+}
+.Pbody{
+    margin-top: 10px;
+}
+#Pbody-background-1{
+    display: none;
+    padding: 10%;
+    height: 800px;
+}
+#Pbody-writ{
+    max-width:100% ;
+    display: grid;
+    grid-template-rows: min-content ;
+}
+#textarea{
+    resize: none;
+    height: 700px;
+}
+#Pbody-button{
+    display: flex;
+    justify-content: center;
+}
+#Pbody-button>button{
+    height: 30px;
+    margin: 14px;
+}
+#Pbody-background-2{
+    max-width:100% ;
+    min-height: 400px;
+    padding: 10%;
+}
+
+
+@media(max-width: 900px){
+    #menu1-background{display: none;}
+    #menu2-background{display: block;}
+      
+}
+
+

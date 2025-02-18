@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/test2.1.css">
+
+    <!-- defer를 추가하면 HTML이 로드된 후 JavaScript 실행됨 -->
+</head>
+
+<body>
+    <div class="Phead" id="Phead">
+        <div class="Phead" id="menu1-background">
+            <ul>
+                <li>
+                    <a onclick="Click1()">글쓰기</a> &nbsp;
+                    <a onclick="">미정2</a> &nbsp;
+                    <a onclick="">미정3</a> &nbsp;
+                    <a onclick="">미정4</a>
+                </li>
+            </ul>
+        </div>
+        <div class="Phead" id="menu2-background">
+            <div class="M2" id="M2-icon">☰</div>
+            <div class="menu">
+                <ul>
+                    <li><a onclick="Click1()">글쓰기</a></li>
+                    <li><a onclick="">미정2</a></li>
+                    <li><a onclick="">미정3</a></li>
+                    <li><a onclick="">미정4</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script>
+        function Click1() {
+            document.getElementById("Pbody-background-2").style.display = "none";
+            document.getElementById("Pbody-background-1").style.display = "block";
+        }
+
+    </script>
+    <div class="Pbody" id="Pbody-background-1">
+        <div id="Pbody-writ">
+            <input id="head-input" type="text" placeholder="제목을 입력하세요...">
+            <textarea id="textarea" placeholder="여기에 텍스트를 입력하세요..."></textarea>
+        </div>
+        <div id="Pbody-button">
+            <button onclick="saveBtn()">저장</button> &nbsp;&nbsp;
+            <button onclick="DSbtn()">취소</button>
+        </div>
+    </div>
+    <div class="Pbody" id="Pbody-background-2"></div>
+    <script>
+        function getElements() {
+            return {
+                head: document.getElementById("head-input"),
+                textarea: document.getElementById("textarea"),
+                sav: document.getElementById("Pbody-background-1"),
+                bo: document.getElementById("Pbody-background-2")
+            };
+        }
+
+        function saveBtn() {
+            const { head, textarea, sav, bo } = getElements();
+            // let el = new getElements();
+
+            bo.innerHTML = `<h2>${head.value}</h2><hr>${textarea.value}`;
+            head.value = "";
+            textarea.value = "";
+            sav.style.display = 'none';
+            bo.style.display = "block";
+        }
+     
+        function DSbtn() {
+            const { head, textarea, sav, bo } = getElements();
+            head.value = "";
+            textarea.value = "";
+            sav.style.display = 'none';
+            document.getElementById("Pbody-background-2").style.display = "block";
+        }
+    </script>
+
+
+</html>
