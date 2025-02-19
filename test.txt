@@ -1,4 +1,3 @@
 생성
 hello
 world
-hi
