@@ -1,9 +1,3 @@
 생성
 hello
-<<<<<<< HEAD
-world
-hi
-저장
-=======
-world
->>>>>>> main
+
